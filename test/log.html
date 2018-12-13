@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>登录页面</title>
+<link rel="stylesheet" type="text/css" href="css/log.css">
+</head>
+<body>
+<!-- nav -->
+<div class="nav">
+	<div class="nav_left">
+		<a href="https://www.louisvuitton.cn"><img src="img/117.jpg"></a>
+	</div>
+	<div class="nav_center">
+		<a href="https://www.louisvuitton.cn/zhs-cn/lv-now">LV NOW</a>
+		<p class="world">路易威登世界<span id="sanJiao"></span></p>
+		<p class="lady">女士<span id="sanJiao"></span></p>
+		<p class="gelter">男士<span id="sanJiao"></span></p>
+		<a href="https://www.louisvuitton.cn/zhs-cn/stores">专卖店</a>
+	</div>
+	<div class="nav_right">
+		<img class="imgs" src="img/112.jpg"/>
+		<a href="https://secure.louisvuitton.cn/zhs-cn/mylv/wishlist">
+			<img src="img/113.jpg"/>
+		</a>
+		<a  href="javascript:;">
+			<img src="img/114.jpg"/>
+		</a>
+		<a href="https://www.louisvuitton.cn/zhs-cn/start-the-journey">
+			<img src="img/115.jpg"/>
+		</a>
+		<span>400&nbsp;6588&nbsp;555</span>
+	</div>	
+</div>
+<!-- lv_log -->
+<div class="lv_log">
+	<div class="top">
+		<h3>会员登录</h3>
+		<p>必填项目*</p>
+	</div>
+	<div class="already">
+		<div class="count">
+			<h4>已有账户请登录</h4>
+			<div class="mid">
+				<p>用户名(手机号/电子<br/>邮箱地址)</p>
+				<input id="username" type="text" placeholder="用户名">
+			</div>
+			<div class="lv_id">
+				<p>密码</p>
+				<input id="userpass" type="password">
+			</div>
+			<div class="lv_mid">
+				<span id="spanError">登录失败，用户名或者密码不正确</span>
+				<a>忘记密码?</a>
+			</div>
+			<div class="bottom">
+				<a id="btnLogin" href="#">
+					登录
+				</a>
+			</div>		
+		</div>
+		<div class="registe">
+			<h3>我没有注册过任何账户</h3>
+			<ul>
+				<h4>创建MyLV账户后，您可以通过任何设备</h4>
+				<li>查询您的网上订单以及历史购买记录</li>
+				<li>管理您的个人信息</li>
+				<li>获取最新的路易威登电子报</li>
+				<li>储存您的购物袋及愿望清单</li>
+			</ul>
+			<div class="bottom">
+				<a href="register.html">
+					创建MYLV账户
+				</a>
+			</div>
+		</div>
+	</div>	
+<!-- footer -->
+	<div class="footer">
+		<div class="lou">
+			<div class="lv_div">
+				<h3>路易威登</h3>
+				<div class="lv_two">
+					<img src="img/e1.jpg">
+					<span>我的路易威登</span>
+				</div>
+			</div>
+			<a href="#pageTop">
+				<img src="img/a2.jpg"/>
+			</a>
+		</div>
+	</div>
+<!-- lvfooter -->
+	<div class="lvfooter">
+		<a href="https://www.louisvuitton.com/dispatch/?noDRP=true">中国大陆</a>
+		<a href="https://secure.louisvuitton.cn/zhs-cn/mylv/newsletter">订阅电子报</a>
+		<a href="https://www.louisvuitton.cn/zhs-cn/start-the-journey">联系我们</a>
+		<a href="https://www.louisvuitton.cn/zhs-cn/apps">应用程序</a>
+		<a href="#">关注我们</a>
+		<a href="https://www.louisvuitton.cn/zhs-cn/legal-privacy">法律声明和隐私条款</a>
+		<a href="http://www.miibeian.gov.cn/">沪ICP备09069024号</a>
+		<a href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&serial=9031000020170316112726000001643594-SAIC_SHOW_310000-gswonderswsupport2014081576564097&signData=MEUCIC6gKd7vArBfnadP+z1V9Jy54Hna26shntqaBr0T4vWBAiEAivyqc44s1S6wlkWGSyZauqSQEFQ2QtnmGDUbO9ppPSI">电子营业执照</a>
+		<a href="https://www.louisvuitton.cn/content/dam/lv/online/picture/china/Permit_for_Running_Publications.pdf">出版物经营许可证</a>
+		<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010602001249">沪公网安备</a>
+		<a href="https://jobs.louisvuitton.com/zhs/">招聘</a>
+		<span>网站地图</span>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/cookieTools.js" ></script>
+<script type="text/javascript">
+	function $(id){
+	return document.getElementById(id);
+}
+
+window.onload = function(){
+	
+	$("btnLogin").onclick = function(){
+		let xhr = new XMLHttpRequest();
+		xhr.open("post","logincheck02.php",true);
+		
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState==4 && xhr.status==200){
+				if(xhr.responseText=="0"){
+					$("spanError").style.display = "block";
+				}else{
+					//保存cookie
+					addCookie("username",$("username").value,7);
+					location.href = "index.html";
+				}
+			} 
+		}	
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		let sendStr="username="+$("username").value+"&userpass="+$("userpass").value;
+		xhr.send(sendStr);
+	}
+}
+</script>

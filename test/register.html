@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>注册页面</title>
+<link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+<!-- nav -->
+	<div class="nav">
+		<div class="nav_left">
+			<a href="https://www.louisvuitton.cn"><img src="img/117.jpg"></a>
+		</div>
+		<div class="nav_center">
+			<a href="https://www.louisvuitton.cn/zhs-cn/lv-now">LV NOW</a>
+			<p class="world">路易威登世界<span id="sanJiao"></span></p>
+			<p class="lady">女士<span id="sanJiao"></span></p>
+			<p class="gelter">男士<span id="sanJiao"></span></p>
+			<a href="https://www.louisvuitton.cn/zhs-cn/stores">专卖店</a>
+		</div>
+		<div class="nav_right">
+			<img class="imgs" src="img/112.jpg"/>
+			<a href="https://secure.louisvuitton.cn/zhs-cn/mylv/wishlist">
+				<img src="img/113.jpg"/>
+			</a>
+			<a class="lr" href="javascript:;">
+				<img src="img/114.jpg"/><span class="san"></span>
+			</a>
+			<div class="lv_log">
+				<span class="spancl">×</span>
+				<div class="count">
+					<div class="top">
+						<h3>会员登录</h3>
+						<h5>我已有一个账户</h5>
+					</div>
+					<div class="mid">
+						<p>用户名(手机号/电子邮箱地址)</p>
+						<input type="text" placeholder="手机号/邮箱"><br>
+						<p>密码</p>
+						<input type="password"><br>
+						<div class="lv_mid">
+							<span>此项不能为空</span>
+							<a>忘记密码?</a>
+						</div>						
+					</div>
+					<div class="bottom">
+						<a href="javascript:;">
+							<img src="img/a1.jpg"/>登录
+						</a>
+					</div>
+				</div>
+				<div class="registe">
+					<h3>创建新的账户</h3>
+					<ul>
+						<h4>创建MyLV账户后，您可以通过任何设备</h4>
+						<li>查询您的网上订单以及历史购买记录</li>
+						<li>管理您的个人信息</li>
+						<li>获取最新的路易威登电子报</li>
+						<li>储存您的购物袋及愿望清单</li>
+					</ul>
+					<div class="bottom">
+						<a href="register.html">
+							<img src="img/a1.jpg">创建MYLV账户
+						</a>
+					</div>
+				</div>
+			</div>
+			<a href="https://www.louisvuitton.cn/zhs-cn/start-the-journey">
+				<img src="img/115.jpg"/>
+			</a>
+			<span>400&nbsp;6588&nbsp;555</span>
+		</div>	
+	</div>
+<!-- build -->
+	<div class="build">
+		<div class="all">
+			<div class="lv_one">
+				<h3>创建一个我的路易威登账户</h3>
+				<a href="log.html">已有账户请登录</a>
+			</div>
+			<div class="project">
+				<p>创建个人账户，以获取更多专属咨讯和丰富体验</p>
+				<p>必填项目*</p>
+			</div>
+			<div class="perino">
+				<h4>个人信息</h4>
+				<div class="cheng">
+					<p>称谓*</p>
+					<select>
+						<option>小姐</option>
+						<option>先生</option>
+					</select>
+				</div>
+				<div class="name">
+					<p>姓氏*</p>
+					<input type="text">
+				</div>
+				<div class="ming">
+					<p>名字*</p>
+					<input type="text">
+				</div>
+				<div class="country">
+					<p>国家*</p>
+					<span>中国</span>
+				</div>
+			</div>	
+			<form class="logino" action="regsave.php" method="post">
+			<h4>登录信息</h4>
+			<div class="tel">
+				<p>手机号码*</p>
+				<span>+86</span>
+				<input type="text" name="username" id="txtusername">
+				<span id="userspan"></span>
+			</div>
+			<div class="yan">
+				<p>验证码*</p>
+				<div class="zheng">
+					<p>请您输入下图中的验证码：</p>
+					<div class="lv_span">
+						<span></span>
+						<input type="text" placeholder="请输入验证码">
+					</div>
+					
+				</div>
+			</div>
+			<div class="ma">
+				<img src="img/b1.jpg">
+				<img src="img/b2.jpg">
+				<input type="button" value="验证">
+			</div>
+			<div class="get">
+				<p>获取验证码*</p>
+				<input type="text">
+				<a>获取验证码</a>
+			</div>
+			<div class="email">
+				<p>电子邮箱地址</p>
+				<input type="text">
+			</div>
+			<div class="again">
+				<p>再次输入电子邮箱</p>
+				<input type="text" name="">
+			</div>
+			<div class="password">
+				<p>密码</p>
+				<div class="www">
+					<input type="password" name="userpass">
+					<span>您的新密码必须至少长达6个字符，并且包含一个数字，1个大写字母和一个小写字母</span>
+				</div>
+				
+			</div>
+			<div class="sub">
+				<p>密码确认*</p>
+				<input type="password" name="">
+			</div>
+			<div class="refer">
+				<input type="checkbox" checked>订阅路易威登电子报，您已仔细阅读、理解并同意路易威登（中国）<a href="#">隐私政策*</a><br/>
+				<input type="checkbox">我已仔细阅读、理解并同意路易威登（中国）<a href="#">隐私政策*</a>
+			</div>
+			<div class="btn">
+				<input type="submit" value="提交">
+			</div>
+			
+		</form>
+		<div class="duan">
+			<p>Louis Vuitton Malletier / 路易威登马利蒂（法国）公司将保存您的个人信息，用以管理和改进您的客户体验，向您提供路易威登产品和服务的信息，以及用于统计和调研目的。您的信息将被传递给路易威登在世界各地的机构，包括欧盟以外的地区，以便向您提供有关路易威登的各方面的信息。为确保对您信息的充分保护，您的个人信息在欧盟以外地区的传递已经过“法国国家信息自由委员会”（“CNIL”）的授权（2006年9月15日决议），并受欧盟委员会标准合同条款的管辖。根据法国法律n°78-17 “Informatique et Libertés” 2004年修正案，您可查询、修改或删除您的个人信息</p>
+		</div>
+		</div>
+	
+		<div class="sever">
+			<div class="center">
+				<h3>顾客服务中心</h3>
+				<a>
+					<img src="img/c1.jpg">
+					<span>400&nbsp;6588&nbsp;555</span>
+				</a>
+			</div>
+			<div class="register">
+				<h3>关于您的路易威登账户</h3>
+				<ul>
+					<h4>通过创建一个路易威登账户，您将享有以下特权：</h4>
+					<li>查询您的网上订单以及历史购买记录</li>
+					<li>管理您的个人信息</li>
+					<li>获取最新的路易威登电子报</li>
+					<li>储存您的购物袋及愿望清单</li>
+				</ul>
+			</div>
+			<div class="contact">
+				<a href="#">
+					<img src="img/d1.jpg"><span>通过EMALL联络我们</span>
+				</a>
+			</div>
+		</div>
+		
+
+	</div>
+<!-- footer -->
+	<div class="footer">
+		<div class="lou">
+			<div class="lv_div">
+				<h3>路易威登</h3>
+				<div class="lv_two">
+					<img src="img/e1.jpg">
+					<span>我的路易威登</span>
+				</div>
+			</div>
+			<a href="#pageTop">
+				<img src="img/a2.jpg"/>
+			</a>
+		</div>
+	</div>
+<!-- lvfooter -->
+	<div class="lvfooter">
+		<a href="https://www.louisvuitton.com/dispatch/?noDRP=true">中国大陆</a>
+		<a href="https://secure.louisvuitton.cn/zhs-cn/mylv/newsletter">订阅电子报</a>
+		<a href="https://www.louisvuitton.cn/zhs-cn/start-the-journey">联系我们</a>
+		<a href="https://www.louisvuitton.cn/zhs-cn/apps">应用程序</a>
+		<a href="#">关注我们</a>
+		<a href="https://www.louisvuitton.cn/zhs-cn/legal-privacy">法律声明和隐私条款</a>
+		<a href="http://www.miibeian.gov.cn/">沪ICP备09069024号</a>
+		<a href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&serial=9031000020170316112726000001643594-SAIC_SHOW_310000-gswonderswsupport2014081576564097&signData=MEUCIC6gKd7vArBfnadP+z1V9Jy54Hna26shntqaBr0T4vWBAiEAivyqc44s1S6wlkWGSyZauqSQEFQ2QtnmGDUbO9ppPSI">电子营业执照</a>
+		<a href="https://www.louisvuitton.cn/content/dam/lv/online/picture/china/Permit_for_Running_Publications.pdf">出版物经营许可证</a>
+		<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010602001249">沪公网安备</a>
+		<a href="https://jobs.louisvuitton.com/zhs/">招聘</a>
+		<span>网站地图</span>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+
+	function $(id){
+		return document.getElementById(id);
+	}
+
+
+	window.onload=function(){
+		document.getElementById("txtusername").onblur = function(){
+		let xhr = new XMLHttpRequest();
+		xhr.open("get","checkuser.php?user="+this.value,true);
+		
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState==4 && xhr.status==200){
+				 $("userSpan").innerHTML =  xhr.responseText;
+			} 
+		}
+		
+		xhr.send();
+	}
+	}
+
+
+
+	$(".lr").mouseenter(function(){
+		$(".lv_log").css("display","flex");
+		$(".san").css("display","block");
+	})
+
+
+	$(".spancl").click(function(){
+		$(".lv_log").css("display","none");
+		$(".san").css("display","none");
+	})
+
+
+	
+</script>

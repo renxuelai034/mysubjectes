@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+<style type="text/css">
+*{
+	padding: 0;
+	margin:0;
+}
+body{
+	width: 100%;
+	background: pink;
+}
+a{
+	display: flex;
+	text-decoration: none;
+}
+img{
+	border:0;
+	display: block;
+}
+
+
+/*nav*/
+.nav{
+	width: 100%;
+	background: #140c0e;
+	height:50px ;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+.nav_left{
+	margin-left: 17px;
+}
+.nav_left a img{
+	width: 186px;
+	height: 50px;
+}
+.nav_center{
+	display: flex;
+}
+.nav_center a{
+	font-size: 14px;
+	color:#969b8e;
+	line-height: 50px;
+	text-decoration: none;
+	border-bottom: 0px solid white;
+	transition: all .2s;
+}
+.nav_center a:hover{
+	border-bottom: 3px solid white;
+	color: white;
+}
+.nav_center p:hover{
+	border-bottom: 3px solid white;
+	cursor: pointer;
+	color: white;
+}
+.nav_center a:first-child{
+	margin-right: 11px;
+}
+.nav_center a:last-child{
+	margin-left: 11px;
+}
+.nav_center p{
+	font-size: 14px;
+	color:#969b8e;
+	margin:0 11px;
+	border-bottom: 0px solid white;
+	line-height:50px;
+	transition: all .2s;
+	position: relative;
+}
+#sanJiao{
+	width: 0;
+	height: 0;
+	border:14px solid transparent;
+	border-bottom-color:white;
+	position: absolute;
+	top:42px;
+	left:50%;
+	transform: translateX(-50%);
+	display: none;
+}
+.nav_center p:hover{
+	border-bottom: 3px solid white;
+	cursor: pointer;
+}
+.nav_right{
+	display: flex;
+	align-items: center;
+	/*justify-content: space-between;*/
+}
+.nav_right a{
+	/*display: flex;*/
+	margin-right:15px;
+}
+.nav_right a:hover{
+	border-bottom: 3px solid white;
+}
+.nav_right a:nth-of-type(1) img{
+	width:15px ;
+	height: 16px;
+}
+.nav_right a:nth-of-type(2) img{
+	width:15px ;
+	height: 13px;
+}
+.nav_right a:nth-of-type(3) img{
+	width:29px ;
+	height: 16px;
+}
+.nav_right a:nth-of-type(4) img{
+	width:15px ;
+	height: 15px;
+}
+.nav_right .imgs{
+	width:19px ;
+	height: 16px;
+	margin-right: 15px;
+}
+.nav_right span{
+	font-size: 12px;
+	color: #969b8e;
+	margin-right: 18px;
+}
+
+.she{
+	width:944px;
+	display: none;
+	position: absolute;
+	top: 70px;
+	left:50%;
+	transform: translateX(-50%);
+}
+.lv_promi{
+	width: 267px;
+	height: 496px;
+	background: #443229;
+}
+.kong{
+	position: absolute;
+	bottom: 100%;
+	width: 944px;
+	height: 20px;
+	background: transparent;
+}
+.lv_asnier{
+	width: 678px;
+	height: 496px;
+	background: white;
+	overflow: hidden;
+	position: relative;
+}
+.lv_promi h1{
+	color:white ;
+	font-size:30px ;
+	line-height: 30px;
+	padding-top: 18px;
+	margin-left: 20px;
+	padding-bottom: 20px;
+}
+.lv_commit{
+	display: flex;
+	flex-direction: column;
+}
+.lv_commit a{
+	color: #bfa69a;
+	font-size: 14px;
+	text-indent: 7px;
+	height: 26px;
+	line-height: 26px;
+	/*background: white;*/
+	margin-left: 15px;
+	margin-bottom: 7px;
+}
+.lv_commit>a{
+	position:relative;
+}
+.lv_commit a:hover{
+	color: white;
+}
+.lv_commit>a img{
+	position: absolute;
+	top:6px;
+	right: 20px;
+	opacity: 0;
+}
+.lv_asnier>div{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.lv_asnier div a{
+	color: black;
+	font-size:16px ;
+	line-height:32px ;
+}
+.lv_svn{
+	width: 214px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 15px;
+}
+.lv_svn a{
+	width: 175px;
+}
+.lv_insert img{
+	width: 444px;
+	height: 444px;
+	padding-right: 20px;
+}
+</style>
+</head>
+<body>
+	<!-- nav -->
+	<div class="nav">
+		<div class="nav_left">
+			<a href="https://www.louisvuitton.cn"><img src="img/117.jpg"></a>
+		</div>
+		<div class="nav_center">
+			<a href="https://www.louisvuitton.cn/zhs-cn/lv-now">LV NOW</a>
+			<p class="world">路易威登世界<span id="sanJiao"></span></p>
+			<p class="lady">女士<span id="sanJiao"></span></p>
+			<p class="gelter">男士<span id="sanJiao"></span></p>
+			<a href="https://www.louisvuitton.cn/zhs-cn/stores">专卖店</a>
+		</div>
+		<div class="nav_right">
+			<a href="javascript:;">
+				<img src="img/111.jpg"/>
+			</a>
+			<img class="imgs" src="img/112.jpg"/>
+			<a href="https://secure.louisvuitton.cn/zhs-cn/mylv/wishlist">
+				<img src="img/113.jpg"/>
+			</a>
+			<a href="javascript:;">
+				<img src="img/114.jpg"/>
+			</a>
+			<a href="https://www.louisvuitton.cn/zhs-cn/start-the-journey">
+				<img src="img/115.jpg"/>
+			</a>
+			<span>400&nbsp;6588&nbsp;555</span>
+		</div>
+		<div class="lv_world she">
+			<div class="lv_promi">
+				<div class="kong"></div>
+				<h1>路易威登世界</h1>
+				<div class="lv_commit">
+					<a href="#lv_11" >传统工艺<img src="img/a3.jpg"></a>
+					<a href="#lv_21" >路易威登基金会<img src="img/a3.jpg"></a>
+					<a href="#lv_31" >品牌艺术<img src="img/a3.jpg"></a>
+					<a href="#lv_41" >品牌挚友<img src="img/a3.jpg"></a>
+					<a href="#lv_51" >路易威登奖杯箱<img src="img/a3.jpg"></a>
+					<a href="#lv_61" >品牌承诺<img src="img/a3.jpg"></a>
+				</div>
+			</div>
+			<div class="lv_asnier">
+				<div id="lv_11" >
+					<div class="lv_svn">
+						<a href="#">ASNIERS</a>
+						<a href="#">展览</a>
+						<a href="#">传统风范</a>
+						<a href="#">硬箱系列</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/10.jpg"/>
+						</a>
+					</div>
+				</div>
+				<div id="lv_21" >
+					<div class="lv_svn">
+						<a href="#">路易威登基金会</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/11.jpg"/>
+						</a>
+					</div>
+				</div>
+				<div id="lv_31"  >
+					<div class="lv_svn">
+						<a href="#">OBJETS NOMADES旅行家剧系列</a>
+						<a href="#">路易威登艺术空间</a>
+						<a href="#">全球专卖店</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/1.jpg"/>
+						</a>
+					</div>
+				</div>
+				<div id="lv_41">
+					<div class="lv_svn">
+						<a href="#">品牌挚友</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/2.jpg"/>
+						</a>
+					</div>
+				</div>
+				<div id="lv_51">
+					<div class="lv_svn">
+						<a href="#">路易威登奖杯箱</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/3.jpg"/>
+						</a>
+					</div>
+				</div>
+				<div id="lv_61">
+					<div class="lv_svn">
+						<a href="#">路易威登携手UNICEF</a>
+						<a href="#">品牌保护</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/11.jpg"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lv_lady she">
+			<div class="lv_promi">
+				<div class="kong"></div>
+				<h1>女士</h1>
+				<div class="lv_commit">
+					<a href="#">臻礼之选</a>
+					<a href="#">时尚手袋</a>
+					<a href="#">小型皮具</a>
+					<a href="#">鞋履系列</a>
+					<a href="#">高级成衣</a>
+					<a href="#">旅行用品</a>
+					<a href="#">时尚配饰</a>
+					<a href="#">珠宝腕表</a>
+					<a href="#">OBJETS NOMADES 旅行家居系列</a>
+					<a href="#">香水系列</a>
+					<a href="#">LV STORIES 贴饰系列</a>
+					<a href="#">时装秀</a>
+					<a href="#">订制服务</a>
+				</div>
+			</div>
+			<div class="lv_asnier">
+				<div>
+					<div class="lv_svn">
+						<a href="#">节日佳礼</a>
+						<a href="#">新品精选</a>
+						<a href="#">经典系列</a>
+						<a href="#">家居丽饰</a>
+						<a href="#">个性订制</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">新品精选</a>
+						<a href="#">MONOGRAM 手袋</a>
+						<a href="#">经典手袋</a>
+						<a href="#">斜挎包</a>
+						<a href="#">手提包</a>
+						<a href="#">通勤包</a>
+						<a href="#">手包和晚宴包</a>
+						<a href="#">稀有皮革手袋</a>
+						<a href="#">时装秀系列</a>
+						<a href="#">全系列手袋</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">短款钱夹</a>
+						<a href="#">长款钱夹</a>
+						<a href="#">链条钱夹</a>
+						<a href="#">手拿包</a>
+						<a href="#">钥匙包和卡片夹</a>
+						<a href="#">数码设备保护套</a>
+						<a href="#">稀有皮革钱夹</a>
+						<a href="#">全系列产品</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">运动鞋</a>
+						<a href="#">居家鞋</a>
+						<a href="#">平底鞋</a>
+						<a href="#">凉鞋</a>
+						<a href="#">高跟鞋</a>
+						<a href="#">及踝靴与长靴</a>
+						<a href="#">全系列产品</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+					 	</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">按造型查看</a>
+						<a href="#">全系列产品</a>
+						<a href="#">上装</a>
+						<a href="#">夹克和外套</a>
+						<a href="#">连衣裙</a>
+						<a href="#">晚宴裙</a>
+						<a href="#">半身裙</a>
+						<a href="#">裤装</a>
+						<a href="#">针织衫</a>
+						<a href="#">牛仔系列</a>
+						<a href="#">皮革系列</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">创新四轮拉杆箱系列</a>
+						<a href="#">拉杆箱</a>
+						<a href="#">旅行袋</a>
+						<a href="#">硬质行李箱</a>
+						<a href="#">旅行配件</a>
+						<a href="#">旅行游记和城市指南</a>
+						<a href="#">全系列产品</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">围巾和披肩</a>
+						<a href="#">丝质方巾和束发带</a>
+						<a href="#">时尚首饰</a>
+						<a href="#">皮质手镯</a>
+						<a href="#">腰带</a>
+						<a href="#">太阳眼镜</a>
+						<a href="#">钥匙扣，包饰和其他</a>
+						<a href="#">家居丽饰</a>
+						<a href="#">路易威登经典书籍</a>
+						<a href="#">旅行游记和城市指南</a>
+						<a href="#">书写系列</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">珠宝</a>
+						<a href="#">腕表</a>
+						<a href="#">高级珠宝</a>
+						<a href="#">路易威登携手 UNICEF</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">全系列产品</a>
+						<a href="#">设计灵感</a>
+						<a href="#">家居系列</a>
+						<a href="#">家饰系列</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">探索香水系列</a>
+						<a href="#">路易威登香水</a>
+						<a href="#">旅行系列</a>
+						<a href="#">精湛工艺</a>
+						<a href="#">MY LV 香水</a>
+					</div>
+					<div class="lv_svn">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">全系列产品</a>
+						<a href="#">时尚手袋</a>
+						<a href="#">小型皮具</a>
+						<a href="#">时尚配饰</a>
+						<a href="#">鞋履系列</a>
+						<a href="#">高级成衣</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">2019 春夏时装秀</a>
+						<a href="#">2019 早春时装秀</a>
+						<a href="#">2018 秋冬时装秀</a>
+						<a href="#">时装秀精选</a>
+						<a href="#">NICOLAS GHESQUIERE</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div >
+					<div  class="lv_svn">
+						<a href="#">MY LV TAMBOUR</a>
+						<a href="#">MY LV 世界之旅</a>
+						<a href="#">个性化订制 MON MONOGRAM</a>
+						<a href="#">个性化烫印服务</a>
+						<a href="#">MY LV 香水</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lv_gelter she">
+			<div class="lv_promi">
+				<div class="kong"></div>
+				<h1>男士</h1>
+				<div class="lv_commit">
+					<a href="#">臻礼之选</a>
+					<a href="#">时尚手袋</a>
+					<a href="#">小型皮具</a>
+					<a href="#">鞋履系列</a>
+					<a href="#">高级成衣</a>
+					<a href="#">旅行用品</a>
+					<a href="#">时尚配饰</a>
+					<a href="#">珠宝腕表</a>
+					<a href="#">OBJETS NOMADES 旅行家居系列</a>
+					<a href="#">香水系列</a>
+					<a href="#">LV STORIES 贴饰系列</a>
+					<a href="#">时装秀</a>
+					<a href="#">订制服务</a>
+				</div>
+			</div>
+			<div class="lv_asnier">	
+				<div>
+					<div class="lv_svn">
+						<a href="#">节日佳礼</a>
+						<a href="#">新品精选</a>
+						<a href="#">经典系列</a>
+						<a href="#">家居丽饰</a>
+						<a href="#">个性订制</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">新品精选</a>
+						<a href="#">MONOGRAM 手袋</a>
+						<a href="#">经典手袋</a>
+						<a href="#">斜挎包</a>
+						<a href="#">手提包</a>
+						<a href="#">通勤包</a>
+						<a href="#">手包和晚宴包</a>
+						<a href="#">稀有皮革手袋</a>
+						<a href="#">时装秀系列</a>
+						<a href="#">全系列手袋</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">短款钱夹</a>
+						<a href="#">长款钱夹</a>
+						<a href="#">链条钱夹</a>
+						<a href="#">手拿包</a>
+						<a href="#">钥匙包和卡片夹</a>
+						<a href="#">数码设备保护套</a>
+						<a href="#">稀有皮革钱夹</a>
+						<a href="#">全系列产品</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">运动鞋</a>
+						<a href="#">居家鞋</a>
+						<a href="#">平底鞋</a>
+						<a href="#">凉鞋</a>
+						<a href="#">高跟鞋</a>
+						<a href="#">及踝靴与长靴</a>
+						<a href="#">全系列产品</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+					 	</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">按造型查看</a>
+						<a href="#">全系列产品</a>
+						<a href="#">上装</a>
+						<a href="#">夹克和外套</a>
+						<a href="#">连衣裙</a>
+						<a href="#">晚宴裙</a>
+						<a href="#">半身裙</a>
+						<a href="#">裤装</a>
+						<a href="#">针织衫</a>
+						<a href="#">牛仔系列</a>
+						<a href="#">皮革系列</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">创新四轮拉杆箱系列</a>
+						<a href="#">拉杆箱</a>
+						<a href="#">旅行袋</a>
+						<a href="#">硬质行李箱</a>
+						<a href="#">旅行配件</a>
+						<a href="#">旅行游记和城市指南</a>
+						<a href="#">全系列产品</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">围巾和披肩</a>
+						<a href="#">丝质方巾和束发带</a>
+						<a href="#">时尚首饰</a>
+						<a href="#">皮质手镯</a>
+						<a href="#">腰带</a>
+						<a href="#">太阳眼镜</a>
+						<a href="#">钥匙扣，包饰和其他</a>
+						<a href="#">家居丽饰</a>
+						<a href="#">路易威登经典书籍</a>
+						<a href="#">旅行游记和城市指南</a>
+						<a href="#">书写系列</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">珠宝</a>
+						<a href="#">腕表</a>
+						<a href="#">高级珠宝</a>
+						<a href="#">路易威登携手 UNICEF</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">全系列产品</a>
+						<a href="#">设计灵感</a>
+						<a href="#">家居系列</a>
+						<a href="#">家饰系列</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">探索香水系列</a>
+						<a href="#">路易威登香水</a>
+						<a href="#">旅行系列</a>
+						<a href="#">精湛工艺</a>
+						<a href="#">MY LV 香水</a>
+					</div>
+					<div class="lv_svn">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">全系列产品</a>
+						<a href="#">时尚手袋</a>
+						<a href="#">小型皮具</a>
+						<a href="#">时尚配饰</a>
+						<a href="#">鞋履系列</a>
+						<a href="#">高级成衣</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="lv_svn">
+						<a href="#">2019 春夏时装秀</a>
+						<a href="#">2019 早春时装秀</a>
+						<a href="#">2018 秋冬时装秀</a>
+						<a href="#">时装秀精选</a>
+						<a href="#">NICOLAS GHESQUIERE</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+				<div >
+					<div  class="lv_svn">
+						<a href="#">MY LV TAMBOUR</a>
+						<a href="#">MY LV 世界之旅</a>
+						<a href="#">个性化订制 MON MONOGRAM</a>
+						<a href="#">个性化烫印服务</a>
+						<a href="#">MY LV 香水</a>
+					</div>
+					<div class="lv_insert">
+						<a href="#">
+							<img src="img/9.jpg">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+	// lv_world的显示、消失
+	$(".world").mouseenter(function(){
+		$(".lv_world").css("display","flex");
+		$(".world #sanJiao").css("display","block");
+		if($(".world").mouseleave()){
+			if($(".lv_world").mouseenter()){
+				$(".lv_world").css("display","flex");
+				$(".world #sanJiao").css("display","block");
+			}
+		}
+	})
+	$(".lv_world").mouseleave(function(){
+		$(".lv_world").fadeOut("800","linear");
+		$(".world #sanJiao").fadeOut("800","linear");
+	})
+
+
+	// lv_lady的显示、消失
+	$(".lady").mouseenter(function(){
+		$(".lv_lady").css("display","flex");
+		$(".lady #sanJiao").css("display","block");
+		if($(".lady").mouseleave()){
+			if($(".lv_lady").mouseenter()){
+				$(".lv_lady").css("display","flex");
+				$(".lady #sanJiao").css("display","block");
+			}
+		}
+	})
+	$(".lv_lady").mouseleave(function(){
+		$(".lv_lady").fadeOut("800","linear");
+		$(".lady #sanJiao").fadeOut("800","linear");
+	})
+
+
+
+	// lv_gelter的显示、消失
+	$(".gelter").mouseenter(function(){
+		$(".lv_gelter").css("display","flex");
+		$(".gelter #sanJiao").css("display","block");
+		if($(".gelter").mouseleave()){
+			if($(".lv_gelter").mouseenter()){
+				$(".lv_gelter").css("display","flex");
+				$(".gelter #sanJiao").css("display","block");
+			}
+		}
+	})
+	$(".lv_gelter").mouseleave(function(){
+		$(".lv_gelter").fadeOut("800","linear");
+		$(".gelter #sanJiao").fadeOut("800","linear");
+	})
+
+
+
+	// 链接中箭头的出现
+	$(".lv_commit a").click(function(){
+		$(this).css("color","green");
+	})
+</script>
+   
